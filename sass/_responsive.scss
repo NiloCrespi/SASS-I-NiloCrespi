@@ -1,0 +1,157 @@
+@media screen and (max-width: 549px) {
+    
+    body {
+		margin-bottom: 50px;
+        background-color: rgb(236, 223, 240);
+	}
+
+    /* HEADER */
+
+    .header {
+        
+        & &__redes {
+            display: none;
+        }
+
+        .header__contCentral {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+                .header__logo {
+                    height: 80px;
+                    max-width: 500px;
+                    width: 100%;
+
+                        h1 {
+                            text-align: center;
+                            font-family: "Ink Highlight";
+                            font-size: 65px;
+                            color: rgb(144, 102, 183);                        
+                        }
+
+                        @font-face {
+                            font-family: Ink-Highlight;
+                            src: url(./fonts/Ink-Highlight.ttf);
+                        }                        
+                }
+                    
+                .header__menu {
+                    display: none;
+                }
+
+                .header__menuMobile {
+                    display: flex;
+                    flex-flow: column;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: rgb(236, 223, 240);            
+                    
+                        ul {
+                            list-style-type: none;
+                            display: inline-flex;
+                            flex-flow: row;
+                            align-content: center;
+                            border: solid black 1px;                        
+                        
+                                li {
+                                    border: solid black 1px;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;                                
+                                }
+                        }
+                }
+        }
+
+        & &__player {
+            display: none;
+        }
+    }
+
+    /* INDEX */
+
+    .index {
+
+        & &__contLeft {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            
+                h2 {
+                    align-self: start;
+                    margin-left: 10px;
+                    padding-bottom: 10px;            
+                }
+
+                .index__ultimasNoticias {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    width: fit-content;
+                    max-width: 500px;
+                    width: 100%;
+                    background-color: tomato;
+
+                        .index__noticiaMain {
+                            margin: 10px;
+                            
+                                img {
+                                    width: 100%;
+                                    max-width: 450px;
+                                    padding: 5px;                                
+                                }
+
+                                h3 {
+                                    text-align: center;
+                                    padding: 5px;                                
+                                }
+                        }           
+                }
+        }
+        
+        & &__contRight {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            
+                h2 {
+                    align-self: start;
+                    margin-left: 10px;
+                    padding-bottom: 10px;                
+                }
+
+                .index__ultimasResenas {
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-items: space-evenly;
+                    width: fit-content;
+                    max-width: 500px;
+                    width: 100%;
+                    overflow-x: scroll;
+                    
+                        .index__resenaMain {
+                            padding: 5px;
+                            margin: 2px;
+                    
+                                .index__infoResena {
+                                    h3,h4 {
+                                        text-align: center;
+                                    }
+                                } 
+                        }
+                }
+        }
+
+    }
+
+    /* FOOTER */
+
+    .footer {
+        display: none;
+    }
+
+}

@@ -1,0 +1,95 @@
+/* INDEX */
+
+.index {
+    display: grid;
+    grid-template-areas: 
+        "ultNoti ultRese";
+    grid-template-columns: 55% 45%;
+    background-color: $colorPrincipal;
+
+        h2 {
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;        
+        }
+
+
+        & &__contLeft {
+            grid-area: ultNoti;
+            display: flex;
+            flex-flow: column;
+    
+                .index__ultimasNoticias {
+                    display: flex;
+                    flex-flow: column;
+                    width: 650px;
+                    height: 490px;
+                    overflow-y: scroll;
+                    align-self: center;
+                    justify-self: center;
+                    margin: 5px;
+
+                        div {
+                            align-self: center; 
+                        }
+                    
+                        .index__noticiaMain {
+                            width: 600px;
+                            height: 300px;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                            z-index: 1;
+                            position: relative;
+
+                                h3 {
+                                    position: absolute;
+                                    z-index: 2;
+                                    left: 25px;
+                                    top: 240px                        
+                                }
+                        }
+                    }
+        }
+
+        & &__contRight {
+            grid-area: ultRese;
+            display: flex;
+            flex-flow: column;
+            
+                .index__ultimasResenas {
+                    display: flex;
+                    flex-flow: column;
+                    width: 540px;
+                    height: 450px;
+                    overflow-y: scroll;
+                    align-self: center;
+                    justify-self: center;
+                    margin: 5px;
+
+                        .index__resenaMain {
+                            width: 480px;
+                            height: 200px;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                            display: flex;
+                            flex-flow: row;
+                            align-self: center;
+
+                                .index__portadaResena {
+                                    margin: 10px; 
+                                }
+
+                                img {
+                                    width: 180px;
+                                    height: 180px;
+                                    transition: all 1s;                            
+                                }
+
+                                img:hover {
+                                    width: 200px;
+                                    height: 200px;                            
+                                }
+                        }
+                }
+        }
+}

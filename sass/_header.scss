@@ -1,0 +1,92 @@
+//desktop
+
+.header {
+    display: grid;
+    grid-template-areas: 
+        "redes logo player"
+        "redes menu player";
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: $colorPrincipal;
+        
+        & &__redes {
+            grid-area: redes;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-left: 15px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    transition: all 500ms;            
+                }
+
+                img:hover {
+                    width: 45px;
+                    height: 45px;            
+                }
+        }
+
+        & &__logo {
+            grid-area: logo;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            
+                h1 {
+                    padding-top: 50px;
+                    text-align: center;
+                    font-family: "Ink Highlight";
+                    font-size: 80px;
+                    color: $colorLogo;
+                    transform: scale(1, 1);            
+                }
+
+                h1:hover {
+                    transform: scale(1.1, 1.1);
+                    transition: all 500ms;            
+                }
+
+                @font-face {
+                    font-family: Ink-Highlight;
+                    src: url(./fonts/Ink-Highlight.ttf);
+                }            
+        }
+
+        & &__menu {
+            grid-area: menu;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+                ul {
+                    list-style-type: none;
+                    display: inline-flex;
+                    flex-flow: row;
+                    justify-content: space-evenly;
+                    
+                        li {
+                            padding: 20px;
+                            font-size: larger;
+                            font-family: Arial, Helvetica, sans-serif;                    
+                        }
+
+                        li:hover {
+                            font-weight: bold;
+                        }
+                }
+        }
+
+        & &__menuMobile {
+            display: none;
+        }
+
+        & &__player {
+            grid-area: player;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 10px;    
+        }
+}
+
